@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using HelpDesk;
 using HelpDesk.Data;
+using MudBlazor.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
@@ -19,5 +20,7 @@ builder.Services.AddScoped(sp => new HttpClient
 
 // Banco de dados em memória (AppDb)
 builder.Services.AddSingleton<AppDb>();
+
+builder.Services.AddMudServices(); // ✅ registra os serviços do MudBlazor
 
 await builder.Build().RunAsync();
