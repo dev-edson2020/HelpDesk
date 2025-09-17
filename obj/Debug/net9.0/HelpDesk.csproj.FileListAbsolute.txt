@@ -202,8 +202,6 @@ C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\dotnet
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.vktbnixd4s.wasm
-C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.yci1jds7k5.pdb
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm.gz
@@ -409,8 +407,6 @@ C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\dotnet
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.vktbnixd4s.wasm.gz
-C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.yci1jds7k5.pdb.gz
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\HelpDesk.staticwebassets.runtime.json
 C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\HelpDesk.staticwebassets.endpoints.json
@@ -833,7 +829,6 @@ C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\blazor.boot.json
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\tzxjg6is5z-0n6lrtb02s.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\0wz98yz2xy-lftp6ydp6b.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\thxwbjcisr-8rbvw3on5j.gz
-C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\sqnj778buw-aknxgbm4tl.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\x9enevp3e1-hinqberot9.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\gwwm4uhajg-bqjiyaj88i.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\8dgrh12ucp-c2jlpeoesf.gz
@@ -1086,9 +1081,6 @@ C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\eux7vz591w-zbl
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\6ngntzsoy7-tjcz0u77k5.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\fpwyayqhtk-tptq2av103.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\sdx3seywza-lfu7j35m59.gz
-C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\jh3r5kyxcl-vktbnixd4s.gz
-C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\1hu8vtffu4-yci1jds7k5.gz
-C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\66x2okicwx-4g6ah1ffcc.gz
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\staticwebassets.development.json
@@ -1098,3 +1090,12 @@ C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\HelpDesk.dll
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\refint\HelpDesk.dll
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\HelpDesk.pdb
 C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\ref\HelpDesk.dll
+C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.hi70384jqy.wasm
+C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.sfrwbv1qlm.pdb
+C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.hi70384jqy.wasm.gz
+C:\Users\edson.meira\Desktop\HelpDesk\bin\Debug\net9.0\wwwroot\_framework\HelpDesk.sfrwbv1qlm.pdb.gz
+C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\HelpDesk.sourcelink.json
+C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\sqnj778buw-3evu5o3l3c.gz
+C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\jh3r5kyxcl-hi70384jqy.gz
+C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\1hu8vtffu4-sfrwbv1qlm.gz
+C:\Users\edson.meira\Desktop\HelpDesk\obj\Debug\net9.0\compressed\66x2okicwx-tlc7p5jw0i.gz
