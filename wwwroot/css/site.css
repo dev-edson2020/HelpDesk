@@ -1,0 +1,24 @@
+/* Suaviza os placeholders em todos os inputs */
+.form-control::placeholder {
+    color: #999;        /* cinza mais claro */
+    opacity: 1;          /* garante que a cor será aplicada */
+    font-weight: 400;    /* deixa mais leve */
+}
+
+.form-control::placeholder {
+    color: #999;
+    opacity: 1;
+    font-weight: 400;
+}
+
+::placeholder {
+    color: #999 !important;
+    opacity: 1;
+}
+
+.placeholder-select option[value="0"] {
+    color: #999;
+}
+
+
+

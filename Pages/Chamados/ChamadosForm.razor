@@ -1,0 +1,121 @@
+@page "/chamados/novo"
+@page "/chamados/editar/{Id:int}"
+@using HelpDesk.Models
+@using HelpDesk.Data
+@inject AppDb Db
+@inject NavigationManager Nav
+
+<PageTitle>Chamados</PageTitle>
+
+<h3 class="fw-bold mb-5">@(EhEdicao ? "Editar Chamado" : "Novo Chamado")</h3>
+
+<div class="mb-3">
+    <label class="fw-bold">Título</label><br />
+    <input placeholder="Digite o nome do título" @bind="_chamado.Titulo" class="form-control" />
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Descrição</label><br />
+    <textarea placeholder="Digite uma descrição" @bind="_chamado.Descricao" class="form-control"></textarea>
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Cliente</label>
+    <select @bind="_chamado.ClienteId" class="form-select custom-select">
+        <option value="0" disabled selected hidden>Selecione um cliente</option>
+        @foreach (var cli in Db.Clientes)
+        {
+            <option value="@cli.Id">@cli.Nome</option>
+        }
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Técnico</label><br />
+    <select @bind="_chamado.TecnicoId" class="form-select placeholder-select">
+        <option value="0" disabled selected hidden>Selecione um técnico</option>
+        @foreach (var tec in Db.Tecnicos)
+        {
+            <option value="@tec.Id">@tec.Nome</option>
+        }
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Prioridade</label><br />
+    <select @bind="_chamado.Prioridade" class="form-select">
+        @foreach (var p in Enum.GetValues<PrioridadeChamado>())
+        {
+            <option value="@p">@p</option>
+        }
+    </select>
+    
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Status</label><br />
+    <select @bind="_chamado.Status" class="form-select">
+        @foreach (var s in Enum.GetValues<StatusChamado>())
+        {
+            <option value="@s">@s</option>
+        }
+    </select>
+</div>
+
+<button class="btn btn-primary" @onclick="Salvar">Salvar</button>
+<button class="btn btn-secondary ms-2" @onclick="Voltar">Cancelar</button>
+
+@code {
+    [Parameter] public int? Id { get; set; }
+
+    private HelpDesk.Models.Chamado _chamado = new HelpDesk.Models.Chamado();
+    private bool EhEdicao => Id.HasValue;
+
+    protected override void OnInitialized()
+    {
+        if (EhEdicao)
+        {
+            var existente = Db.Chamados.FirstOrDefault(c => c.Id == Id);
+            if (existente != null)
+            {
+                _chamado = new HelpDesk.Models.Chamado
+                {
+                    Id = existente.Id,
+                    Titulo = existente.Titulo,
+                    Descricao = existente.Descricao,
+                    ClienteId = existente.ClienteId,
+                    TecnicoId = existente.TecnicoId,
+                    Prioridade = existente.Prioridade,
+                    Status = existente.Status,
+                    CriadoEm = existente.CriadoEm
+                };
+            }
+        }
+    }
+
+    private void Salvar()
+    {
+        if (_chamado.ClienteId == 0 || _chamado.TecnicoId == 0)
+            return;
+
+        if (EhEdicao)
+        {
+            var atual = Db.Chamados.First(c => c.Id == _chamado.Id);
+            atual.Titulo = _chamado.Titulo;
+            atual.Descricao = _chamado.Descricao;
+            atual.ClienteId = _chamado.ClienteId;
+            atual.TecnicoId = _chamado.TecnicoId;
+            atual.Prioridade = _chamado.Prioridade;
+            atual.Status = _chamado.Status;
+        }
+        else
+        {
+            _chamado.Id = Db.NextChamadoId();
+            Db.Chamados.Add(_chamado);
+        }
+
+        Nav.NavigateTo("/chamados");
+    }
+
+    private void Voltar() => Nav.NavigateTo("/chamados");
+}

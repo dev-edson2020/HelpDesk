@@ -1,0 +1,53 @@
+@page "/chamados"
+@using HelpDesk.Models
+@using HelpDesk.Data
+@inject AppDb Db
+@inject NavigationManager Nav
+
+<PageTitle>Chamados</PageTitle>
+
+<h3 class="fw-bold mb-5">Chamados</h3>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Título</th>
+        <th>Cliente</th>
+        <th>Técnico</th>
+        <th>Prioridade</th>
+        <th>Status</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var ch in Db.Chamados)
+    {
+        var cliente = Db.Clientes.FirstOrDefault(x => x.Id == ch.ClienteId)?.Nome ?? "-";
+        var tecnico = Db.Tecnicos.FirstOrDefault(x => x.Id == ch.TecnicoId)?.Nome ?? "-";
+        <tr>
+            <td>@ch.Titulo</td>
+            <td>@cliente</td>
+            <td>@tecnico</td>
+            <td>@ch.Prioridade</td>
+            <td>@ch.Status</td>
+            <td>
+                <button class="btn btn-sm btn-primary me-2" @onclick="() => Editar(ch.Id)">Editar</button>
+                <button class="btn btn-sm btn-danger" @onclick="() => Excluir(ch.Id)">Excluir</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<button class="btn btn-success" @onclick="Novo">Novo Chamado</button>
+
+@code {
+    private void Novo() => Nav.NavigateTo("/chamados/novo");
+    private void Editar(int id) => Nav.NavigateTo($"/chamados/editar/{id}");
+
+    private void Excluir(int id)
+    {
+        var alvo = Db.Chamados.FirstOrDefault(c => c.Id == id);
+        if (alvo is not null) Db.Chamados.Remove(alvo);
+    }
+}

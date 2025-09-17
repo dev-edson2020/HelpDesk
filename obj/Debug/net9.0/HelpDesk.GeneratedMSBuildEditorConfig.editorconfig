@@ -1,0 +1,68 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudAllowedAttributeList = 
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = HelpDesk
+build_property.RootNamespace = HelpDesk
+build_property.ProjectDir = C:\Users\edson.meira\Desktop\HelpDesk\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\edson.meira\Desktop\HelpDesk
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Pages/Chamados/Chamado.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbWFkb3NcQ2hhbWFkby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Pages/Chamados/ChamadosForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbWFkb3NcQ2hhbWFkb3NGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Pages/Clientes/ClienteForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ2xpZW50ZUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Pages/Clientes/Clientes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ2xpZW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Pages/Técnicos/TecnicoForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVMOpY25pY29zXFRlY25pY29Gb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Pages/Técnicos/Tecnicos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVMOpY25pY29zXFRlY25pY29zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-v9myq6bx7x
+
+[C:/Users/edson.meira/Desktop/HelpDesk/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rbll6kcbtq

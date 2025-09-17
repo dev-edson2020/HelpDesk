@@ -1,0 +1,49 @@
+@page "/tecnicos"
+@using HelpDesk.Models
+@using HelpDesk.Data
+@inject AppDb Db
+@inject NavigationManager Nav
+
+<PageTitle>Técnicos</PageTitle>
+
+<h3 class="fw-bold mb-5">Técnicos</h3>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Especialidade</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var t in Db.Tecnicos)
+    {
+        <tr>
+            <td>@t.Nome</td>
+            <td>@t.Email</td>
+            <td>@t.Telefone</td>
+            <td>@t.Especialidade</td>
+            <td>
+                <button class="btn btn-sm btn-primary me-2" @onclick="() => Editar(t.Id)">Editar</button>
+                <button class="btn btn-sm btn-danger" @onclick="() => Excluir(t.Id)">Excluir</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<button class="btn btn-success" @onclick="Novo">Novo Técnico</button>
+
+@code {
+    private void Novo() => Nav.NavigateTo("/tecnicos/novo");
+    private void Editar(int id) => Nav.NavigateTo($"/tecnicos/editar/{id}");
+
+    private void Excluir(int id)
+    {
+        var alvo = Db.Tecnicos.FirstOrDefault(t => t.Id == id);
+        if (alvo is not null) Db.Tecnicos.Remove(alvo);
+    }
+}

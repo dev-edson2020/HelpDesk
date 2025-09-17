@@ -1,0 +1,81 @@
+@page "/clientes/novo"
+@page "/clientes/editar/{Id:int}"
+@using HelpDesk.Models
+@using HelpDesk.Data
+@inject AppDb Db
+@inject NavigationManager Nav
+
+<PageTitle>Cliente</PageTitle>
+
+<h3 class="fw-bold mb-5">@(EhEdicao ? "Editar Cliente" : "Novo Cliente")</h3>
+
+<div class="mb-3">
+    <label class="fw-bold">Nome</label><br />
+    <input placeholder="Digite o nome do cliente" placeh @bind="_cliente.Nome" class="form-control" />
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Email</label><br />
+    <input placeholder="Digite um email válido" @bind="_cliente.Email" class="form-control" />
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Telefone</label><br />
+    <input placeholder="Digite o número de telefone" @bind="_cliente.Telefone" class="form-control" />
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Empresa</label><br />
+    <input placeholder="Digite o nome da empresa"@bind="_cliente.Empresa" class="form-control" />
+</div>
+
+<button class="btn btn-primary" @onclick="Salvar">Salvar</button>
+<button class="btn btn-secondary ms-2" @onclick="Voltar">Cancelar</button>
+
+@code {
+    [Parameter] public int? Id { get; set; }
+
+    private Cliente _cliente = new();
+    private bool EhEdicao => Id.HasValue;
+
+    protected override void OnInitialized()
+    {
+        if (EhEdicao)
+        {
+            var existente = Db.Clientes.FirstOrDefault(c => c.Id == Id);
+            if (existente != null)
+            {
+                // cria cópia para edição
+                _cliente = new Cliente
+                {
+                    Id = existente.Id,
+                    Nome = existente.Nome,
+                    Email = existente.Email,
+                    Telefone = existente.Telefone,
+                    Empresa = existente.Empresa
+                };
+            }
+        }
+    }
+
+    private void Salvar()
+    {
+        if (EhEdicao)
+        {
+            var atual = Db.Clientes.First(c => c.Id == _cliente.Id);
+            atual.Nome = _cliente.Nome;
+            atual.Email = _cliente.Email;
+            atual.Telefone = _cliente.Telefone;
+            atual.Empresa = _cliente.Empresa;
+        }
+        else
+        {
+            _cliente.Id = Db.NextClienteId();
+            Db.Clientes.Add(_cliente);
+        }
+
+        Nav.NavigateTo("/clientes");
+    }
+
+    private void Voltar() => Nav.NavigateTo("/clientes");
+}

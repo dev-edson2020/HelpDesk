@@ -1,0 +1,80 @@
+@page "/tecnicos/novo"
+@page "/tecnicos/editar/{Id:int}"
+@using HelpDesk.Models
+@using HelpDesk.Data
+@inject AppDb Db
+@inject NavigationManager Nav
+
+<PageTitle>Técnicos</PageTitle>
+
+<h3 class="fw-bold mb-5">@(EhEdicao ? "Editar Técnico" : "Novo Técnico")</h3>
+
+<div class="mb-3">
+    <label class="fw-bold">Nome</label><br />
+    <input placeholder="Digite o nome do técnico" @bind="_tecnico.Nome" class="form-control" />
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Email</label><br />
+    <input placeholder="Digite um email válido" @bind="_tecnico.Email" class="form-control" />
+</div>
+
+<div class="mb-3">
+    <labe class="fw-bold">Telefone</labe><br />
+    <input placeholder="Digite o número do telefone" @bind="_tecnico.Telefone" class="form-control" />
+</div>
+
+<div class="mb-3">
+    <label class="fw-bold">Especialidade</label><br />
+    <input placeholder="Digite a especialidade do técnico" @bind="_tecnico.Especialidade" class="form-control" />
+</div>
+
+<button class="btn btn-primary" @onclick="Salvar">Salvar</button>
+<button class="btn btn-secondary ms-2" @onclick="Voltar">Cancelar</button>
+
+@code {
+    [Parameter] public int? Id { get; set; }
+
+    private Tecnico _tecnico = new();
+    private bool EhEdicao => Id.HasValue;
+
+    protected override void OnInitialized()
+    {
+        if (EhEdicao)
+        {
+            var existente = Db.Tecnicos.FirstOrDefault(t => t.Id == Id);
+            if (existente != null)
+            {
+                _tecnico = new Tecnico
+                {
+                    Id = existente.Id,
+                    Nome = existente.Nome,
+                    Email = existente.Email,
+                    Telefone = existente.Telefone,
+                    Especialidade = existente.Especialidade
+                };
+            }
+        }
+    }
+
+    private void Salvar()
+    {
+        if (EhEdicao)
+        {
+            var atual = Db.Tecnicos.First(t => t.Id == _tecnico.Id);
+            atual.Nome = _tecnico.Nome;
+            atual.Email = _tecnico.Email;
+            atual.Telefone = _tecnico.Telefone;
+            atual.Especialidade = _tecnico.Especialidade;
+        }
+        else
+        {
+            _tecnico.Id = Db.NextTecnicoId();
+            Db.Tecnicos.Add(_tecnico);
+        }
+
+        Nav.NavigateTo("/tecnicos");
+    }
+
+    private void Voltar() => Nav.NavigateTo("/tecnicos");
+}
