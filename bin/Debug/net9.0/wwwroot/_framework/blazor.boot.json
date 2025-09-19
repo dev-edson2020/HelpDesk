@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "HelpDesk",
   "resources": {
-    "hash": "sha256-d8+I1JUgd/EgGG+ZU84Emalu1q9kZV8zNrjQFoX9YLc=",
+    "hash": "sha256-eO6w0w3Kiv4GVlftGFqgGi7gC5/RU28eee0L3QZZ9fQ=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.65wbz7t8mt.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -204,8 +204,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "HelpDesk.1xk5cu9140.wasm": "HelpDesk.wasm",
-      "HelpDesk.uh856wzda3.pdb": "HelpDesk.pdb"
+      "HelpDesk.9sei9y3ut9.wasm": "HelpDesk.wasm",
+      "HelpDesk.xduauh8r4g.pdb": "HelpDesk.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -418,10 +418,10 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "HelpDesk.1xk5cu9140.wasm": "sha256-23LvoHKMCHH5csJF3W57Ed4lo/b6iZT1cuG66OYAm88="
+      "HelpDesk.9sei9y3ut9.wasm": "sha256-WTzXOjwXTuFK7EO03L2OTVUIYHHlTQJfSeL74MVQzAM="
     },
     "pdb": {
-      "HelpDesk.uh856wzda3.pdb": "sha256-QnDg+McsCgl7zGdWhyax86FWIOZAr/paBcSsRGqpi1I="
+      "HelpDesk.xduauh8r4g.pdb": "sha256-q0XVbyH+GqbUp/tcqR0FWP05H2uSvkX9/3H4DLokATM="
     }
   },
   "cacheBootResources": true,
